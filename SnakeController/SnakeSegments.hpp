@@ -12,6 +12,8 @@
 class Event;
 class IPort;
 
+namespace Segments{
+
 struct Segment{
     int x;
     int y;
@@ -31,3 +33,4 @@ public:
 private:
     std::list<Segment> m_segments;
 };
+}
