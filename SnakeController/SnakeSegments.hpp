@@ -19,8 +19,7 @@ struct Segment{
 
 class SnakeSegments{
 public:
-    SnakeSegments(std::list<Segment> m_segments):
-    m_segments{m_segments}{}
+    SnakeSegments(std::list<Segment>);
 
     bool isSegmentAtPosition(int x, int y) const;
     Segment calculateNewHead() const;

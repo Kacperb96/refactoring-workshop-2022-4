@@ -11,7 +11,6 @@
 
 class Event;
 class IPort;
-class SnakeSegments;
 
 namespace Snake
 {
@@ -24,6 +23,7 @@ struct UnexpectedEventException : std::runtime_error
 {
     UnexpectedEventException();
 };
+
 
 class Controller : public IEventHandler
 {
@@ -51,6 +51,7 @@ private:
 
     std::list<Segment> m_segments;
     Direction m_currentDirection;
+    
 
     void handleTimeoutInd();
     void handleDirectionInd(std::unique_ptr<Event>);
