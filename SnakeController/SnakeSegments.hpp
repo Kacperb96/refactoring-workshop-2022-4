@@ -13,20 +13,24 @@ class IPort;
 
 namespace SnakeSegments{
 
-template <class T>
+struct Segment{
+    int x;
+    int y;
+};
+
 class SnakeSegments{
 public:
-    SnakeSegments(std::list<T> m_segments):
+    SnakeSegments(std::list<Segment> m_segments):
     m_segments{m_segments}{}
 
     bool isSegmentAtPosition(int x, int y) const;
-    T calculateNewHead() const;
-    void updateSegmentsIfSuccessfullMove(T const& newHead);
-    void addHeadSegment(T const& newHead);
-    void removeTailSegmentIfNotScored(T const& newHead);
+    Segment calculateNewHead() const;
+    void updateSegmentsIfSuccessfullMove(Segment const& newHead);
+    void addHeadSegment(Segment const& newHead);
+    void removeTailSegmentIfNotScored(Segment const& newHead);
     void removeTailSegment();
 
 private:
-    std::list<T> m_segments;
+    std::list<Segment> m_segments;
 };
 } // namespace SnakeSegments
