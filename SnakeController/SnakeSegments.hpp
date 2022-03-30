@@ -11,9 +11,14 @@
 class Event;
 class IPort;
 
+namespace SnakeSegments{
+
 template <class T>
 class SnakeSegments{
 public:
+    SnakeSegments(std::list<T> m_segments):
+    m_segments{m_segments}{}
+
     bool isSegmentAtPosition(int x, int y) const;
     T calculateNewHead() const;
     void updateSegmentsIfSuccessfullMove(T const& newHead);
@@ -24,3 +29,4 @@ public:
 private:
     std::list<T> m_segments;
 };
+} // namespace SnakeSegments
