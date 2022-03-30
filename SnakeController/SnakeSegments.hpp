@@ -12,8 +12,6 @@
 class Event;
 class IPort;
 
-namespace SnakeSegments{
-
 struct Segment{
     int x;
     int y;
@@ -34,4 +32,3 @@ public:
 private:
     std::list<Segment> m_segments;
 };
-} // namespace SnakeSegments
